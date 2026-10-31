@@ -1,0 +1,6 @@
+# One instruction per line. Lines starting with # are ignored.
+# This example runs against a free public demo login page.
+type tomsmith in the username field
+type SuperSecretPassword! in the password field
+click the Login button
+assert the text "You logged into a secure area" appears on the page

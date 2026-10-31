@@ -1,0 +1,15 @@
+<html><head><meta charset="utf-8">
+<title>Automation Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; }
+table { border-collapse: collapse; width: 100%; }
+td, th { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background: #f4f4f4; }
+</style></head><body>
+<h2>Automation Report</h2>
+<p><b>URL:</b> https://retail-dev.vinecrms.com/app/</p>
+<table>
+<tr><th>Instruction</th><th>Action</th><th>Status</th><th>Detail</th></tr>
+<tr><td>navigate to https://retail-dev.vinecrms.com/app/</td><td>navigate</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>navigated to https://retail-dev.vinecrms.com/app/</td></tr><tr><td>click the Close button</td><td>click</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>clicked</td></tr><tr><td>wait 2 seconds</td><td>wait</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>waited 2s</td></tr><tr><td>type kartikc@regenesys.net in the email field</td><td>type</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>typed 'kartikc@regenesys.net' (verified via JS fallback)</td></tr><tr><td>click the Send OTP button</td><td>click</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>clicked</td></tr><tr><td>capture_api_value url_contains="api/api/" json_path="data.otp" store_as="OTP" timeout="15"</td><td>capture_api_value</td><td style='color:#c0392b;font-weight:bold'>FAIL</td><td>timed out waiting for OTP</td></tr><tr><td>type {OTP} in the OTP field</td><td>type</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>typed 'otp' (verified via JS fallback)</td></tr><tr><td>click the Login button</td><td>click</td><td style='color:#1a7f37;font-weight:bold'>PASS</td><td>clicked</td></tr><tr><td>assert the text "Dashboard" appears on the page</td><td>assert_text</td><td style='color:#c0392b;font-weight:bold'>FAIL</td><td>selenium error: TimeoutException</td></tr>
+</table>
+</body></html>

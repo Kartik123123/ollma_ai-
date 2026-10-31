@@ -1,0 +1,9 @@
+navigate to https://retail-dev.vinecrms.com/app/
+click the Close button
+wait 2 seconds
+type kartikc@regenesys.net in the email field
+click the Send OTP button
+capture_api_value url_contains="api/api/" json_path="data.otp" store_as="OTP" timeout="15"
+type {OTP} in the OTP field
+click the Login button
+assert the text "Dashboard" appears on the page

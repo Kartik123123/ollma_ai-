@@ -1,0 +1,100 @@
+[
+  {
+    "instruction": "navigate to https://retail-dev.vinecrms.com/app/",
+    "action": "navigate",
+    "status": "pass",
+    "detail": "navigated to https://retail-dev.vinecrms.com/app/",
+    "locator": null,
+    "value": "https://retail-dev.vinecrms.com/app/",
+    "value_var": null
+  },
+  {
+    "instruction": "click the Close button",
+    "action": "click",
+    "status": "pass",
+    "detail": "clicked",
+    "locator": {
+      "by": "ID",
+      "value": "close-modal"
+    },
+    "value": null,
+    "value_var": null
+  },
+  {
+    "instruction": "wait 2 seconds",
+    "action": "wait",
+    "status": "pass",
+    "detail": "waited 2s",
+    "locator": null,
+    "value": null,
+    "value_var": null
+  },
+  {
+    "instruction": "type kartikc@regenesys.net in the email field",
+    "action": "type",
+    "status": "pass",
+    "detail": "typed 'kartikc@regenesys.net' (verified via JS fallback)",
+    "locator": null,
+    "value": "kartikc@regenesys.net",
+    "value_var": null
+  },
+  {
+    "instruction": "click the Send OTP button",
+    "action": "click",
+    "status": "pass",
+    "detail": "clicked",
+    "locator": {
+      "by": "XPATH",
+      "value": "//a[normalize-space()='kartikc@regenesys.net']"
+    },
+    "value": null,
+    "value_var": null
+  },
+  {
+    "instruction": "capture_api_value url_contains=\"api/api/\" json_path=\"data.otp\" store_as=\"OTP\" timeout=\"15\"",
+    "action": "capture_api_value",
+    "status": "fail",
+    "detail": "timed out waiting for OTP",
+    "locator": null,
+    "value": null,
+    "store_as": "OTP",
+    "url_contains": "api/api/",
+    "json_path": "data.otp"
+  },
+  {
+    "instruction": "type {OTP} in the OTP field",
+    "action": "type",
+    "status": "pass",
+    "detail": "typed 'otp' (verified via JS fallback)",
+    "locator": {
+      "by": "XPATH",
+      "value": "//a[normalize-space()='kartikc@regenesys.net']"
+    },
+    "value": "otp",
+    "value_var": null
+  },
+  {
+    "instruction": "click the Login button",
+    "action": "click",
+    "status": "pass",
+    "detail": "clicked",
+    "locator": {
+      "by": "XPATH",
+      "value": "//a[normalize-space()='otp']"
+    },
+    "value": null,
+    "value_var": null
+  },
+  {
+    "instruction": "assert the text \"Dashboard\" appears on the page",
+    "action": "assert_text",
+    "status": "fail",
+    "detail": "selenium error: TimeoutException",
+    "locator": {
+      "by": "XPATH",
+      "value": "//a[normalize-space()='otp']"
+    },
+    "value": "Dashboard",
+    "value_var": null
+  }
+]
